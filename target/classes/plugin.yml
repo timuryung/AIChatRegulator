@@ -1,0 +1,8 @@
+name: AIChatRegulator
+version: '1.0'
+main: org.timurarahost.aichatregulator.AIChatRegulator
+author : Timur Yun
+commands:
+  aichat:
+    description: Displays plugin info
+    usage: /<command> [playerName]
