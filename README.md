@@ -6,7 +6,7 @@ AI Chat Regulator is a Bukkit/Spigot plugin designed to enhance the moderation o
 
 Before using the AI Chat Regulator plugin, ensure that you have **Nitro** installed on your system. Nitro is essential for running the language model required by this plugin.
 
-To install Nitro, run the following command in your terminal:
+To install Nitro, run the following command in your terminal (MacOS and Linux only, Windows is not supported at the moment):
 
 ```
 curl -sfL https://raw.githubusercontent.com/janhq/nitro/main/install.sh | sudo /bin/bash -
@@ -57,10 +57,6 @@ The plugin supports commands for administrators to manage its operation dynamica
 ## Support
 
 If you encounter any issues or have suggestions for improvements, please feel free to open an issue on the GitHub repository page.
-
-## License
-
-This project is licensed under [specify license], allowing for widespread use and modification in accordance with the license terms.
 
 ---
 
