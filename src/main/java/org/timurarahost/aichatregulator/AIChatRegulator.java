@@ -124,11 +124,16 @@ public final class AIChatRegulator extends JavaPlugin {
                         JSONObject firstChoice = choicesArray.getJSONObject(0);
                         JSONObject messageObject = firstChoice.getJSONObject("message");
                         String contentResponse = messageObject.getString("content");
-                        if (contentResponse.contains("HARMFUL")) {
+                        if (contentResponse.contains("HARMFUL") || contentResponse.contains("ВРЕДНО")) {
                             incrementInappropriateMessageCount(player.getName());
                             // Extract reason from response if available
                             int harmfulIndex = contentResponse.indexOf("HARMFUL");
-                            String reason = contentResponse.substring(contentResponse.indexOf("HARMFUL"));
+                            String reason = "";
+                            if (contentResponse.contains("HARMFUL")) {
+                                reason = contentResponse.substring(contentResponse.indexOf("HARMFUL"));
+                            } else if (contentResponse.contains("ВРЕДНО")) {
+                                reason = contentResponse.substring(contentResponse.indexOf("ВРЕДНО"));
+                            }
                             reason = reason.split("\\.")[0] + ".";
                             // Issue warning to the player
                             if (player != null && player.isOnline()) {
